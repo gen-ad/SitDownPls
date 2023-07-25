@@ -5,10 +5,12 @@ const swiper = new Swiper('.swiper-container', {
     slidesPerView: 1,
     loop: true,
     spaceBetween: 0,
+    preventClicks: false,
+    preventClicksPropagation: false,
     pagination: {
         el: '.hero-pagination',
         type: 'bullets',
-        clickable: true, 
+        clickable: true,
     },
 });
 
@@ -78,7 +80,7 @@ validation
     },
     {
         rule: 'customRegexp',
-        value: /^([0-9]( |-)?)?(\(?[0-9]{3}\)?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$/,
+        value: /...([0-9]( |-)?)?(\(?[0-9]{3}\)?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$/,
         errorMessage: 'Недопустимый формат'
         },
   ])
@@ -184,7 +186,7 @@ validation
 
 var phoneMask = IMask(
   document.getElementById('tel'), {
-    mask: '+{7}(000)000-00-00'
+    mask: '+{7}(000)000-0000'
   });
 
   tippy('#myButton', {

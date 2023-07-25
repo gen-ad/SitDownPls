@@ -16,13 +16,80 @@
     <link rel="stylesheet" href="./css/hero_and_offers.min.css">
     <link rel="stylesheet" href="./css/footer.min.css">
     <link rel="stylesheet" href="./css/catalog.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/rate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css">
     <link rel="stylesheet" href="./css/callback.min.css">
     <link rel="stylesheet" href="./css/card.min.css">
     <link rel="stylesheet" href="./css/media.min.css">
     <title>Document</title>
+
+    <style>
+
+        .swiper {
+          width: 100%;
+          height: 100%;
+        }
+    
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+    
+        .swiper-slide img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: none;
+        }
+    
+        .swiper {
+          width: 100%;
+          height: 300px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+    
+        .swiper-slide {
+          background-size: cover;
+          background-position: center;
+        }
+    
+        .mySwiper2 {
+          height: 80%;
+          width: 100%;
+          margin-bottom: 50px;
+        }
+    
+        .mySwiper {
+          height: 20%;
+          box-sizing: border-box;
+          /* padding: 10px 0; */
+        }
+    
+        .mySwiper .swiper-slide {
+          width: 25%;
+          height: 100%;
+          /* opacity: 0.4; */
+        }
+    
+        .mySwiper .swiper-slide-thumb-active {
+          opacity: 1;
+        }
+    
+        .swiper-slide img {
+          display: block;
+          max-width: 80%;
+          max-height: 418px;
+          object-fit: contain;
+        }
+    </style>
+
+
 </head>
 
 <body>
@@ -192,7 +259,7 @@
             <nav class="catalog-nav">
 
                 <div class="catalog-nav-item">
-                    <a href="./index.html" class="catalog-item">Главная&nbsp;</a>
+                    <a href="../index.html" class="catalog-item">Главная&nbsp;</a>
                     <span class="catalog-item">/&nbsp;</span>
                 </div>
                 <div class="catalog-nav-item">
@@ -221,65 +288,48 @@
                     <div class="card-box-item first-box-item">
                         <div id="ex3" class="modal">
                             <div class="modal-3">
-                                <div class="modal-3-picture">
-                                    <picture>
-                                        <source media="(max-width: 1920px) and (min-width: 1251px)" srcset="./img/card-big-sofa-modal-1920.png">
-                                        <source media="(max-width: 1250px) and (min-width: 979px)" srcset="./img/card-big-sofa-modal-1024.png">
-                                        <source media="(max-width: 978px) and (min-width: 577px)" srcset="./img/card-big-sofa-modal-768.png">
-                                        <source media="(max-width: 576px) and (min-width: 320px)" srcset="./img/card-big-sofa-modal-320.png">
-                                        <img src="./img/card-big-sofa-modal-1920.png" alt="photo" style="width:auto;">
-                                    </picture>
-                                </div>
-                                <div class="modal-swiper">
-                                    <div class="swiper-container-7">
 
-                                        <div class="swiper-wrapper">
-
-
-                                            <div class="swiper-slide modal-slide">
-
-                                                <picture>
-                                                    <source media="(max-width: 1920px) and (min-width: 577px)" srcset="./img/card-lit-sofa-modal-1920.png">
-                                                    <source media="(max-width: 576px) and (min-width: 320px)" srcset="./img/card-lit-sofa-modal-320.png">
-                                                    <img src="./img/card-lit-sofa-modal-1920.png" alt="photo" style="width:auto;">
-                                                </picture>
-
-                                            </div>
-                                            <div class="swiper-slide modal-slide">
-
-                                                <picture>
-                                                    <source media="(max-width: 1920px) and (min-width: 320px)" srcset="./img/card-lit-sofa-2-modal-1920.png">
-                                                    <img src="./img/card-lit-sofa-2-modal-1920.png" alt="photo" style="width:auto;">
-                                                </picture>
-                                            </div>
-
-                                            <div class="swiper-slide modal-slide">
-
-                                                <picture>
-                                                    <source media="(max-width: 1920px) and (min-width: 320px)" srcset="./img/card-lit-sofa-3-modal-1920.png">
-                                                    <img src="./img/card-lit-sofa-3-modal-1920.png" alt="photo" style="width:auto;">
-                                                </picture>
-                                            </div>
-
-                                            <div class="swiper-slide modal-slide">
-
-                                                <picture>
-                                                    <source media="(max-width: 1920px) and (min-width: 320px)" srcset="./img/card-lit-sofa-4-modal-1920.png">
-                                                    <img src="./img/card-lit-sofa-4-modal-1920.png" alt="photo" style="width:auto;">
-                                                </picture>
-                                            </div>
-
-
-
-                                        </div>
-                                        <div class="modal-buttons">
-                                            <button class="swiper-button-prev modal-button-prev  btn-reset"></button>
-                                            <button class="swiper-button-next modal-button-next btn-reset"></button>
-                                        </div>
+                                <!-- Swiper -->
+                                
+                                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+                                    <div class="swiper-wrapper">
+                                      <div class="swiper-slide">
+                                        <img src="./img/card-big-sofa-modal.png" />
+                                      </div>
+                                      <div class="swiper-slide">
+                                        <img src="./img/card-lit-sofa-modal.png" />
+                                      </div>
+                                      <div class="swiper-slide">
+                                        <img src="./img/card-lit-sofa-2-modal.png" />
+                                      </div>
+                                      <div class="swiper-slide">
+                                        <img src="./img/card-lit-sofa-3-modal.png" />
+                                      </div>
+                                      <div class="swiper-slide">
+                                        <img src="./img/card-lit-sofa-4-modal.png" />
+                                      </div>
                                     </div>
-                                </div>
-
-
+                                
+                                  </div>
+                                  <div thumbsSlider="" class="swiper mySwiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="./img/card-big-sofa-modal.png" />
+                                          </div>
+                                          <div class="swiper-slide">
+                                            <img src="./img/card-lit-sofa-modal.png" />
+                                          </div>
+                                          <div class="swiper-slide">
+                                            <img src="./img/card-lit-sofa-2-modal.png" />
+                                          </div>
+                                          <div class="swiper-slide">
+                                            <img src="./img/card-lit-sofa-3-modal.png" />
+                                          </div>
+                                          <div class="swiper-slide">
+                                            <img src="./img/card-lit-sofa-4-modal.png" />
+                                          </div>
+                                    </div>
+                                  </div>
 
                                 <div class="modal-3-down">
                                     <picture>
@@ -390,16 +440,19 @@
 
                                     </div>
 
+                                    <button class="btn btn-primary card-buttons callback-button" id="submit-btn">
+                                        <a href="#ex2" rel="modal:open">Отправить</a>
+                                    </button>
+
                                     <!-- Link to open the modal -->
-                                    <p><a href="#ex2" rel="modal:open" class="btn btn-primary card-buttons callback-button" id="submit-btn">Отправить</a></p>
+                                    <!-- <p><a href="#ex2" rel="modal:open" class="btn btn-primary card-buttons callback-button" id="submit-btn">Отправить</a></p> -->
 
                                 </form>
                                 <div>
                                     <input class="custom-checkbox" id="happy" type="checkbox" name="happy" value="yes">
-                                    <label for="happy"></label>
-                                    <span class="callback-accept">Принимаю <a class="callback-link">пользовательское
-                                            соглашение</a></span>
-                                </div>
+                                    <label class="happy__checkbox" for="happy"><span class="callback-accept">Принимаю </span></label>
+                                    <a class="callback-link">пользовательское соглашение</a>
+                                </div>                            
                             </div>
 
                         </div>
@@ -1272,12 +1325,31 @@
 
     <script src="./js/custom-select.js"></script>
     <script src="./js/choices.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
     <script src="https://unpkg.com/imask"></script>
     <script src="./js/card.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          loop: true,
+          spaceBetween: 78,
+          slidesPerView: 4,
+          freeMode: true,
+          watchSlidesProgress: false,
+        });
+        var swiper2 = new Swiper(".mySwiper2", {
+          loop: true,
+          spaceBetween: 78,
+          thumbs: {
+            swiper: swiper,
+          },
+        });
+
+    </script>
+
 </body>
 
 </html>

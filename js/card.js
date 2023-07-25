@@ -91,7 +91,8 @@ const validate = new window.JustValidate('#form');
 const validation = new JustValidate('#form', {
     errorLabelStyle: {
         color: '#FF6972'
-    }
+    },
+    validateBeforeSubmitting: true,
 });
 
 validation
@@ -120,13 +121,15 @@ validation
         },
         {
             rule: 'customRegexp',
-            value: /^([0-9]( |-)?)?(\(?[0-9]{3}\)?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$/,
+            value: /...([0-9]( |-)?)?(\(?[0-9]{3}\)?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$/,
             errorMessage: 'Недопустимый формат'
         },
     ]);
 
+    
+
 
 var phoneMask = IMask(
     document.getElementById('tel'), {
-        mask: '+{7}(000)000-00-00'
+        mask: '+{7}(000)000-0000'
     });
