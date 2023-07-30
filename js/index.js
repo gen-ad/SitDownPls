@@ -93,7 +93,14 @@ validation
       rule: 'email',
       errorMessage: 'Недопустимый формат',
     },
-  ]);
+  ])
+  .addField('#happy',[
+    {
+      rule: 'required',
+      errorMessage: 'Обязательно к выбору',
+    }
+  ]
+  );
 
 
 
